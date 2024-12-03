@@ -2,11 +2,17 @@ import streamlit as st
 import pickle 
 from nltk.corpus import stopwords
 import nltk
-nltk.download('punkt_tab', download_dir='/Users/vallabhpatil777/Documents/ML-Projects/email-spam-detection/venv/nltk_data')
+import os
+nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')  # Use current working directory
+
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
+
+nltk.download('punkt_tab', download_dir=nltk_data_dir)
 
 from nltk.stem.porter import PorterStemmer
-nltk.download('stopwords',download_dir='/Users/vallabhpatil777/Documents/ML-Projects/email-spam-detection/venv/nltk_data')
-nltk.data.path.append('/Users/vallabhpatil777/Documents/ML-Projects/email-spam-detection/venv/nltk_data')
+nltk.download('stopwords',download_dir=nltk_data_dir)
+nltk.data.path.append(nltk_data_dir)
 
 import string 
 ps = PorterStemmer()
