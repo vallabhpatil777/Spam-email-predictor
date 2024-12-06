@@ -18,6 +18,8 @@ Text Preprocessing: Text data was preprocessed by removing stop words, punctuati
 TF-IDF Vectorization: The text data was converted into numerical features using TF-IDF (Term Frequency-Inverse Document Frequency), which is suitable for text classification tasks.
 Model Selection: Several machine learning models were tested, and the Multinomial Naive Bayes model was chosen due to its excellent performance with text data.
 Evaluation Metrics: The model achieved an accuracy of 98.5% and a precision of 98%, demonstrating high efficiency in classifying spam messages.
+
+
 Technologies Used:
 
 Streamlit: For building the frontend web application.
